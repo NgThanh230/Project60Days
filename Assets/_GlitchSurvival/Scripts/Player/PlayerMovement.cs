@@ -10,10 +10,13 @@ public class PlayerMovement : MonoBehaviour
     public float lastVerticalVector;
     [HideInInspector]   // Tham chiếu tới Rigidbody2D
     public Vector2 movement;      // Vector lưu input
+    [HideInInspector]
+    public Vector2 lastMovedVector;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Lấy component Rigidbody2D
+        lastMovedVector = new Vector2(1, 0f);
     }
 
     void Update()
@@ -27,10 +30,16 @@ public class PlayerMovement : MonoBehaviour
         if(movement.x != 0)
         {
             lastHorizontalVector = movement.x;
+            lastMovedVector = new Vector2(lastHorizontalVector, 0f); //lấy hướng chuyển động cuối 
         }
         if(movement.y != 0)
         {
             lastVerticalVector = movement.y;
+            lastMovedVector = new Vector2(0f, lastVerticalVector);
+        }
+        if (movement.x != 0 && movement.y != 0)
+        {
+            lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector); 
         }
     }
 
