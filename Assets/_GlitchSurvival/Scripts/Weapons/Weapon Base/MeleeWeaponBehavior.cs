@@ -1,0 +1,35 @@
+using UnityEngine;
+//Script dành cho tất cả các vũ khí cân chiến
+public class MeleeWeaponHavior : MonoBehaviour
+{
+    public WeaponScriptableObject weaponData;
+    public float destroyAfterSeconds;
+
+    protected float currentDamage;
+    protected float currentSpeed;
+    protected float currentCoolDownDuration;
+    protected int currentPierce;
+
+    void Awake()
+    {
+        currentDamage = weaponData.Damage;
+        currentSpeed = weaponData.Speed;
+        currentCoolDownDuration = weaponData.CooldownDuration;
+        currentPierce = weaponData.Pierce;
+    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    protected virtual void Start()
+    {
+        Destroy(gameObject, destroyAfterSeconds);
+    }
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        //tham chiếu tới collider của enemy và gây damage bằng TakeDamage()
+        if (collision.CompareTag("Enemy"))
+        {
+            EnemyStats enemy = collision.GetComponent<EnemyStats>();
+            enemy.TakeDamage(currentDamage);  //sử dụng currentDamage vì vũ khí sẽ mạnh lên chứ không nhận dame mặc định
+        }
+    }
+    
+}
