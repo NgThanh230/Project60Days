@@ -26,4 +26,10 @@ public class EnemyStats : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
+        player.TakeDamage(currentHealth);
+    }
 }

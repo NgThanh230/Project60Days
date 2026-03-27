@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;   // Tốc độ di chuyển
-    private Rigidbody2D rb;     
+    private Rigidbody2D rb;
+    public CharacterScriptableObject characterData;
     [HideInInspector]
     public float lastHorizontalVector;
     [HideInInspector]
@@ -46,6 +46,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Di chuyển nhân vật bằng vật lý
-        rb.linearVelocity = movement * moveSpeed;
+        rb.linearVelocity = movement * characterData.MoveSpeed;
     }
 }

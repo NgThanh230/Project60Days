@@ -18,7 +18,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerMovement.movement.x != 0 || playerMovement.movement.y != 0)    
+        if (playerMovement.movement.x != 0 || playerMovement.movement.y != 0)    
         {
             animator.SetBool("Move", true);
             FlipSprite();
@@ -38,4 +38,5 @@ public class NewMonoBehaviourScript : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
+    
 }
