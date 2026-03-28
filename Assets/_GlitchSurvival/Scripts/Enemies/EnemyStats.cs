@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    public EnemieScriptableObject enemyData;
+    public EnemyScriptableObject enemyData;
     float currentMoveSpeed;
     float currentHealth;
     float currentDamage;
@@ -27,9 +27,13 @@ public class EnemyStats : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
-        player.TakeDamage(currentHealth);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
+            player.TakeDamage(currentDamage);
+        }
+       
     }
 }

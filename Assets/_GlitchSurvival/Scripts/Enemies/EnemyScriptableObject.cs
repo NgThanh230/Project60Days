@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnemyScriptableObject", menuName = "ScriptableObject/Enemy")]
-public class EnemieScriptableObject : ScriptableObject
+public class EnemyScriptableObject : ScriptableObject
 {
     //chỉ số mặc định của quái
     [SerializeField]

@@ -297,7 +297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1287068554
 Transform:
   m_ObjectHideFlags: 0
@@ -568,6 +568,7 @@ MonoBehaviour:
   level: 1
   experienceCap: 100
   experienceCapIncrease: 100
+  invincibilityDuration: 0.5
 --- !u!114 &1408409563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,7 +597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1857652793
 Transform:
   m_ObjectHideFlags: 0
@@ -888,7 +889,7 @@ PrefabInstance:
     - target: {fileID: 8387466575411197573, guid: 2a75ad31bd017a642a953d8432e55ac9,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

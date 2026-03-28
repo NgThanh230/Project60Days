@@ -79,6 +79,14 @@ public class ProjectileWeaponBehavior : MonoBehaviour
             enemy.TakeDamage(currentDamage);  //sử dụng currentDamage vì vũ khí sẽ mạnh lên chứ không nhận dame mặc định
             ReducePierce();
         }
+        else if (collision.CompareTag("Prop"))
+        {
+            if (collision.gameObject.TryGetComponent(out BreakableProps breakable))
+            {
+                breakable.TakeDame(currentDamage);
+                ReducePierce();
+            }
+        }
     }
     void ReducePierce()
     {

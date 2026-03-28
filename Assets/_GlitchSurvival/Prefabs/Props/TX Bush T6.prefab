@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 1131889955546231502}
   - component: {fileID: 909385844652773417}
   - component: {fileID: -5156767563562767880}
+  - component: {fileID: -2702192087234342665}
+  - component: {fileID: 233857585610199140}
   m_Layer: 0
   m_Name: TX Bush T6
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,3 +140,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.25, y: 1.09375}
   m_EdgeRadius: 0
+--- !u!114 &-2702192087234342665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2344451856059987005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b680e2c4f936442ac2a819ee1e692c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BreakableProps
+  health: 10
+--- !u!114 &233857585610199140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2344451856059987005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9982da012ebc1984b8b3d44e7eb1ef6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropRateManager
+  drops:
+  - name: Red Potion
+    itemPrefab: {fileID: 1753711969104148964, guid: a0604722e9b88fe4494500a4585fc0ef,
+      type: 3}
+    dropRate: 10

@@ -30,6 +30,14 @@ public class MeleeWeaponHavior : MonoBehaviour
             EnemyStats enemy = collision.GetComponent<EnemyStats>();
             enemy.TakeDamage(currentDamage);  //sử dụng currentDamage vì vũ khí sẽ mạnh lên chứ không nhận dame mặc định
         }
+        else if (collision.CompareTag("Prop"))
+        {
+            if (collision.gameObject.TryGetComponent(out BreakableProps breakable))
+            {
+                breakable.TakeDame(currentDamage);
+                
+            }
+        }
     }
     
 }

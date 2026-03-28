@@ -21,5 +21,13 @@ public class HolyBehavior : MeleeWeaponHavior
             enemy.TakeDamage(currentDamage);  //sử dụng currentDamage vì vũ khí sẽ mạnh lên chứ không nhận dame mặc định
             markedEnemies.Add(collision.gameObject); //đánh dấu kẻ địch để không nhận damage lần thứ 2 
         }
+        else if (collision.CompareTag("Prop"))
+        {
+            if (collision.gameObject.TryGetComponent(out BreakableProps breakable) && !markedEnemies.Contains(collision.gameObject))
+            {
+                breakable.TakeDame(currentDamage);
+                markedEnemies.Add(collision.gameObject);
+            }
+        }
     }
 }
