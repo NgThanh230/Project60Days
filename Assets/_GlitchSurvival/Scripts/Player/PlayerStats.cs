@@ -1,18 +1,30 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public CharacterScriptableObject characterData;
-    float currentHealth;
-    float currentMoveSpeed;
-    float currentMight;
-    float currentProjectileSpeed;
-
+    CharacterScriptableObject characterData;
+    [HideInInspector]
+    public float currentHealth;
+    [HideInInspector]
+    public float currentRecovery;
+    [HideInInspector]
+    public float currentMoveSpeed;
+    [HideInInspector]
+    public float currentMight;
+    [HideInInspector]
+    public float currentProjectileSpeed;
+    [HideInInspector]
+    public float currentMagnet;
+    //kinh nghiệm và level cho nhân vật
     [Header("Experience/Level")]
     public int experience = 0;
     public int level = 1;
     public int experienceCap = 100;
     public int experienceCapIncrease;
+    //vũ khí khởi đầu 
+    public List<GameObject> spawnedWeapons;
 
     [Header("I-Frames")]
     public float invincibilityDuration;
@@ -28,13 +40,21 @@ public class PlayerStats : MonoBehaviour
         {
             isInvincible = false;
         }
+        Recover();
     }
     void Awake()
     {
+        characterData = CharacterSelector.GetData();
+        CharacterSelector.instance.DestroySingleton();
+
         currentHealth = characterData.Maxhealth;
+        currentRecovery = characterData.Recovery;
         currentMoveSpeed = characterData.MoveSpeed;
         currentMight = characterData.Might;
         currentProjectileSpeed = characterData.ProjectileSpeed;
+        currentMagnet = characterData.Magnet;
+
+        SpawnWeapon(characterData.StartingWeapon);
     }
     
     public void IncreaseExperience(int amount)
@@ -83,7 +103,27 @@ public class PlayerStats : MonoBehaviour
         }
         
     }
+    void Recover()
+    {
+        if (currentHealth < characterData.Maxhealth)
+        {
+            //hồi máu theo chỉ số * thời gian thực
+            currentHealth += currentRecovery * Time.deltaTime;
+            //khi hồi thừa máu quá mức thì set cho bằng chỉ số máu tối đa của nhân vật
+            if (currentHealth > characterData.Maxhealth)
+            {
+                currentHealth = characterData.Maxhealth;
+            }
+        }
+    }
 
+    public void SpawnWeapon(GameObject weapon)
+    {
+        //spawn vũ khí khởi đầu
+        GameObject spawnedWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
+        spawnedWeapon.transform.SetParent(transform); //set vũ khí cho nhân vật
+        spawnedWeapons.Add(spawnedWeapon); //add vào list vũ khí khởi đầu
+    }
     public void Kill()
     {
         Debug.Log("Dead");

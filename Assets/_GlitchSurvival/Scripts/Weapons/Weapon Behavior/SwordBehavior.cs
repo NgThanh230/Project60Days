@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FireBehavior : ProjectileWeaponBehavior
+public class SwordBehavior : ProjectileWeaponBehavior
 {
   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,4 +15,5 @@ public class FireBehavior : ProjectileWeaponBehavior
     {
         transform.position += direction * currentSpeed * Time.deltaTime; //Set chuyển động cho vũ khí
     }
+
 }

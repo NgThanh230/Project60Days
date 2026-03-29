@@ -3,18 +3,19 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public CharacterScriptableObject characterData;
+    PlayerStats player;
     [HideInInspector]
     public float lastHorizontalVector;
     [HideInInspector]
     public float lastVerticalVector;
-    [HideInInspector]   // Tham chiếu tới Rigidbody2D
-    public Vector2 movement;      // Vector lưu input
+    [HideInInspector]   
+    public Vector2 movement;    
     [HideInInspector]
     public Vector2 lastMovedVector;
 
     void Start()
     {
+        player = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>(); // Lấy component Rigidbody2D
         lastMovedVector = new Vector2(1, 0f);
     }
@@ -46,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Di chuyển nhân vật bằng vật lý
-        rb.linearVelocity = movement * characterData.MoveSpeed;
+        rb.linearVelocity = movement * player.currentMoveSpeed;
+
     }
 }

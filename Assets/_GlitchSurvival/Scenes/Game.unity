@@ -281,7 +281,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1287068553
+--- !u!1 &851285095
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,22 +289,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1287068554}
-  - component: {fileID: 1287068555}
+  - component: {fileID: 851285096}
+  - component: {fileID: 851285098}
+  - component: {fileID: 851285097}
   m_Layer: 0
-  m_Name: HolyController
+  m_Name: Collector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1287068554
+--- !u!4 &851285096
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287068553}
+  m_GameObject: {fileID: 851285095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -313,19 +314,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1408409556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1287068555
+--- !u!58 &851285097
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851285095}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!114 &851285098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287068553}
+  m_GameObject: {fileID: 851285095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e02bc6492d75f348b0115e41be7b07c, type: 3}
+  m_Script: {fileID: 11500000, guid: a65da4d52d69a4946980edd4245fcd3b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HolyController
-  weaponData: {fileID: 11400000, guid: 872c46ce71061ad43a466485d56673e7, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollector
+  pullSpeed: 300
 --- !u!1 &1408409554
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +379,6 @@ GameObject:
   - component: {fileID: 1408409561}
   - component: {fileID: 1408409560}
   - component: {fileID: 1408409562}
-  - component: {fileID: 1408409563}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -422,8 +458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1857652793}
-  - {fileID: 1287068554}
+  - {fileID: 851285096}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1408409557
@@ -511,7 +546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cafb9c18430b6d4c8e2006792f03f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  characterData: {fileID: 11400000, guid: 82563fb5c9e7f064bae7708a3037237e, type: 2}
   lastHorizontalVector: 0
   lastVerticalVector: 0
   movement: {x: 0, y: 0}
@@ -563,69 +597,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31aa98fba17c1e04a81b655cc9fed17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  characterData: {fileID: 11400000, guid: 82563fb5c9e7f064bae7708a3037237e, type: 2}
+  currentHealth: 0
+  currentRecovery: 0
+  currentMoveSpeed: 0
+  currentMight: 0
+  currentProjectileSpeed: 0
+  currentMagnet: 0
   experience: 0
   level: 1
   experienceCap: 100
   experienceCapIncrease: 100
+  spawnedWeapons: []
   invincibilityDuration: 0.5
---- !u!114 &1408409563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408409554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a65da4d52d69a4946980edd4245fcd3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollector
---- !u!1 &1857652792
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1857652793}
-  - component: {fileID: 1857652794}
-  m_Layer: 0
-  m_Name: Fire Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1857652793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857652792}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1408409556}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1857652794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857652792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 141e816a9a495a94180a4b57793dcc50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KnifeController
-  weaponData: {fileID: 11400000, guid: 40559e08c6a881e4eabfbdfa4d1cae68, type: 2}
 --- !u!1001 &3094165162956425225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -826,6 +809,12 @@ PrefabInstance:
       propertyPath: drops.Array.data[0].dropRate
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: -1514643664439328290, guid: 2a75ad31bd017a642a953d8432e55ac9,
+        type: 3}
+      propertyPath: drops.Array.data[0].itemPrefab
+      value: 
+      objectReference: {fileID: 1753711969104148964, guid: a0604722e9b88fe4494500a4585fc0ef,
+        type: 3}
     - target: {fileID: 778936525659753802, guid: 2a75ad31bd017a642a953d8432e55ac9,
         type: 3}
       propertyPath: m_Name
