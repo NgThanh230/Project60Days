@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8aa1e55193c2b4fbaba753158b49ff, type: 3}
   m_Name: Holy Character
   m_EditorClassIdentifier: Assembly-CSharp::CharacterScriptableObject
-  startingWeapon: {fileID: 1765375397352784097, guid: 738bac7d44f3465408ad0b4a68a54d9b,
+  startingWeapon: {fileID: 7181664600633072581, guid: c25d2cb308538854bb75e773ab465b6a,
     type: 3}
   maxhealth: 1000
   recovery: 1
