@@ -17,7 +17,10 @@ public class MeleeWeaponHavior : MonoBehaviour
         currentCoolDownDuration = weaponData.CooldownDuration;
         currentPierce = weaponData.Pierce;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float GetCurrentDamage()
+    {
+        return currentDamage *= FindAnyObjectByType<PlayerStats>().currentMight;
+    }
     protected virtual void Start()
     {
         Destroy(gameObject, destroyAfterSeconds);
@@ -28,13 +31,13 @@ public class MeleeWeaponHavior : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             EnemyStats enemy = collision.GetComponent<EnemyStats>();
-            enemy.TakeDamage(currentDamage);  //sử dụng currentDamage vì vũ khí sẽ mạnh lên chứ không nhận dame mặc định
+            enemy.TakeDamage(GetCurrentDamage());  //sử dụng currentDamage vì vũ khí sẽ mạnh lên chứ không nhận dame mặc định
         }
         else if (collision.CompareTag("Prop"))
         {
             if (collision.gameObject.TryGetComponent(out BreakableProps breakable))
             {
-                breakable.TakeDame(currentDamage);
+                breakable.TakeDame(GetCurrentDamage());
                 
             }
         }
