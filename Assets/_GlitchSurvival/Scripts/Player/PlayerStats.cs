@@ -23,13 +23,19 @@ public class PlayerStats : MonoBehaviour
     public int level = 1;
     public int experienceCap = 100;
     public int experienceCapIncrease;
-    //vũ khí khởi đầu 
-    public List<GameObject> spawnedWeapons;
+   
 
     [Header("I-Frames")]
     public float invincibilityDuration;
     float invincibilityTimer;
     bool isInvincible;
+
+    InventoryManager inventory;
+    public int weaponIndex;
+    public int passiveIndex;
+
+    public GameObject passiveItemCheck1, passiveItemCheck2;
+    public GameObject spawnWeaponCheck;
 
     private void Update()
     {
@@ -47,6 +53,7 @@ public class PlayerStats : MonoBehaviour
         characterData = CharacterSelector.GetData();
         CharacterSelector.instance.DestroySingleton();
 
+        inventory = GetComponent<InventoryManager>();//tham chiếu tới InventoryManager
         currentHealth = characterData.Maxhealth;
         currentRecovery = characterData.Recovery;
         currentMoveSpeed = characterData.MoveSpeed;
@@ -55,6 +62,9 @@ public class PlayerStats : MonoBehaviour
         currentMagnet = characterData.Magnet;
 
         SpawnWeapon(characterData.StartingWeapon);
+        SpawnWeapon(spawnWeaponCheck);
+        SpawnPassiveItem(passiveItemCheck1);
+        SpawnPassiveItem(passiveItemCheck2);
     }
     
     public void IncreaseExperience(int amount)
@@ -119,10 +129,32 @@ public class PlayerStats : MonoBehaviour
 
     public void SpawnWeapon(GameObject weapon)
     {
+        //check slot trong inventory full chưa, -1 vì .count không đếm từ số 0 còn list bắt đầu từ 0)
+        if (weaponIndex >= inventory.weaponSlots.Count - 1)
+        {
+            Debug.LogError("Inventory full");
+            return;
+        }
         //spawn vũ khí khởi đầu
         GameObject spawnedWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
         spawnedWeapon.transform.SetParent(transform); //set vũ khí cho nhân vật
-        spawnedWeapons.Add(spawnedWeapon); //add vào list vũ khí khởi đầu
+        inventory.AddWeapon(weaponIndex, spawnedWeapon.GetComponent<WeaponController>());// thêm vũ khí vào inventory
+        weaponIndex++;
+    }
+
+    public void SpawnPassiveItem(GameObject passiveItem)
+    {
+        //check slot trong inventory full chưa, -1 vì .count không đếm từ số 0 còn list bắt đầu từ 0)
+        if (passiveIndex >= inventory.passiveItemSlots.Count - 1)
+        {
+            Debug.LogError("Inventory full");
+            return;
+        }
+        //spawn item thụ động khởi đầu
+        GameObject spawnedPassiveItem = Instantiate(passiveItem, transform.position, Quaternion.identity);
+        spawnedPassiveItem.transform.SetParent(transform); //set vũ khí cho nhân vật
+        inventory.AddPassiveItem(passiveIndex, spawnedPassiveItem.GetComponent<PassiveItem>());// thêm vũ khí vào inventory
+        passiveIndex++; 
     }
     public void Kill()
     {

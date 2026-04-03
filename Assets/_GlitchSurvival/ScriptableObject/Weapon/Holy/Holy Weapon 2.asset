@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53920fbe5989db34f849c8b9bc1d03a1, type: 3}
-  m_Name: Sword Weapon
+  m_Name: Holy Weapon 2
   m_EditorClassIdentifier: Assembly-CSharp::WeaponScriptableObject
-  prefab: {fileID: 8678576736677451231, guid: 2f92995dbfc57f74d94735a37eac28b5, type: 3}
-  damage: 5
-  speed: 8
-  cooldownDuration: 2
-  pierce: 1
+  prefab: {fileID: 1765375397352784097, guid: 738bac7d44f3465408ad0b4a68a54d9b, type: 3}
+  damage: 8
+  speed: 0
+  cooldownDuration: 3
+  pierce: 0
+  level: 2
+  nextLevelPrefab: {fileID: 0}
