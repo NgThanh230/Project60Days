@@ -16,3 +16,4 @@ MonoBehaviour:
   level: 1
   nextLevelPrefab: {fileID: 799980649935856848, guid: 33f25a38ffc136143a07c39a3cac5d8e,
     type: 3}
+  icon: {fileID: -215664898694585508, guid: c1b37305bcb3d0c47a60cd2d6b6e092d, type: 3}
