@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Di chuyển nhân vật bằng vật lý
-        rb.linearVelocity = movement * player.currentMoveSpeed;
+        rb.linearVelocity = movement * player.CurrentMoveSpeed;
 
     }
 }

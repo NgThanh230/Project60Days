@@ -5,18 +5,13 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     CharacterScriptableObject characterData;
-    [HideInInspector]
-    public float currentHealth;
-    [HideInInspector]
-    public float currentRecovery;
-    [HideInInspector]
-    public float currentMoveSpeed;
-    //[HideInInspector]
-    public float currentMight;
-    [HideInInspector]
-    public float currentProjectileSpeed;
-    [HideInInspector]
-    public float currentMagnet;
+    
+    float currentHealth;  
+    float currentRecovery;
+    float currentMoveSpeed;
+    float currentMight;
+    float currentProjectileSpeed;
+    float currentMagnet;
     //kinh nghiệm và level cho nhân vật
     [Header("Experience/Level")]
     public int experience = 0;
@@ -37,6 +32,113 @@ public class PlayerStats : MonoBehaviour
     public GameObject passiveItemCheck1, passiveItemCheck2;
     public GameObject spawnWeaponCheck;
 
+    #region Stats Properties
+    public float CurrentHealth
+    {
+        get { return currentHealth; }
+        set
+        {
+            //check nếu giá trị thay đổi thì set lại
+            if (value != currentHealth)
+            {
+                currentHealth = value;
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.HealthDisplay.text = "Health: " + currentHealth;
+                }
+            }   
+        }
+    }
+    public float CurrentRecovery
+    {
+        get { return currentRecovery; }
+        set
+        {
+            //check nếu giá trị thay đổi thì set lại
+            if (value != currentRecovery)
+            {
+                currentRecovery = value;
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.RecoveryDisplay.text = "Recovery: " + currentRecovery;
+                }
+            }
+        }
+    }
+    public float CurrentMoveSpeed
+    {
+        get { return currentMoveSpeed; }
+        set
+        {
+            //check nếu giá trị thay đổi thì set lại
+            if (value != currentMoveSpeed)
+            {
+                currentMoveSpeed = value;
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.MoveSpeedDisplay.text = "Move Speed: " + currentMoveSpeed;
+                }
+            }
+        }
+    }
+    public float CurrentMight
+    {
+        get { return currentMight; }
+        set
+        {
+            //check nếu giá trị thay đổi thì set lại
+            if (value != currentMight)
+            {
+                currentMight = value;
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.MightDisplay.text = "Might: " + currentMight;
+                }
+            }
+        }
+    }
+    public float CurrentProjectileSpeed
+    {
+        get { return currentProjectileSpeed; }
+        set
+        {
+            //check nếu giá trị thay đổi thì set lại
+            if (value != currentProjectileSpeed)
+            {
+                currentProjectileSpeed = value;
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.ProjectileSpeedDisplay.text = "Projectile Speed: " + currentProjectileSpeed;
+                }
+            }
+        }
+    }
+    public float CurrentMagnet
+    {
+        get { return currentMagnet; }
+        set
+        {
+            //check nếu giá trị thay đổi thì set lại
+            if (value != currentMagnet)
+            {
+                currentMagnet = value;
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.MagnetDisplay.text = "Magnet: " + currentMagnet;
+                }
+            }
+        }
+    }
+    #endregion
+    private void Start()
+    {
+        GameManager.instance.HealthDisplay.text = "Health: " + currentHealth;
+        GameManager.instance.RecoveryDisplay.text = "Recovery: " + currentRecovery;
+        GameManager.instance.MoveSpeedDisplay.text = "Move Speed: " + currentMoveSpeed;
+        GameManager.instance.MightDisplay.text = "Might: " + currentMight;
+        GameManager.instance.ProjectileSpeedDisplay.text = "Projectile Speed: " + currentProjectileSpeed;
+        GameManager.instance.MagnetDisplay.text = "Magnet: " + currentMagnet;
+    }
     private void Update()
     {
         if (invincibilityTimer > 0)
@@ -54,12 +156,12 @@ public class PlayerStats : MonoBehaviour
         CharacterSelector.instance.DestroySingleton();
 
         inventory = GetComponent<InventoryManager>();//tham chiếu tới InventoryManager
-        currentHealth = characterData.Maxhealth;
-        currentRecovery = characterData.Recovery;
-        currentMoveSpeed = characterData.MoveSpeed;
-        currentMight = characterData.Might;
-        currentProjectileSpeed = characterData.ProjectileSpeed;
-        currentMagnet = characterData.Magnet;
+        CurrentHealth = characterData.Maxhealth;
+        CurrentRecovery = characterData.Recovery;
+        CurrentMoveSpeed = characterData.MoveSpeed;
+        CurrentMight = characterData.Might;
+        CurrentProjectileSpeed = characterData.ProjectileSpeed;
+        CurrentMagnet = characterData.Magnet;
 
         SpawnWeapon(characterData.StartingWeapon);
         SpawnWeapon(spawnWeaponCheck);
@@ -87,7 +189,7 @@ public class PlayerStats : MonoBehaviour
         //nếu không trong trạng thái miễn nhiễm thì cho phép mất máu và set lại tgian miễn nhiễm 
         if (!isInvincible)
         {
-            currentHealth -= damage;
+            CurrentHealth -= damage;
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;
             //khi máu < 0 nv sẽ chết
@@ -102,27 +204,27 @@ public class PlayerStats : MonoBehaviour
     public void RestoreHealth(float amount)
     {
         //chỉ heal khi máu của nhân vật dưới chỉ số máu tối đa 
-        if (currentHealth < characterData.Maxhealth)
+        if (CurrentHealth < characterData.Maxhealth)
         {
-            currentHealth += amount;
+            CurrentHealth += amount;
             //khi hồi thừa máu quá mức thì set cho bằng chỉ số máu tối đa của nhân vật
-            if (currentHealth > characterData.Maxhealth)
+            if (CurrentHealth > characterData.Maxhealth)
             {
-                currentHealth = characterData.Maxhealth;
+                CurrentHealth = characterData.Maxhealth;
             }
         }
         
     }
     void Recover()
     {
-        if (currentHealth < characterData.Maxhealth)
+        if (CurrentHealth < characterData.Maxhealth)
         {
             //hồi máu theo chỉ số * thời gian thực
-            currentHealth += currentRecovery * Time.deltaTime;
+            CurrentHealth += CurrentRecovery * Time.deltaTime;
             //khi hồi thừa máu quá mức thì set cho bằng chỉ số máu tối đa của nhân vật
-            if (currentHealth > characterData.Maxhealth)
+            if (CurrentHealth > characterData.Maxhealth)
             {
-                currentHealth = characterData.Maxhealth;
+                CurrentHealth = characterData.Maxhealth;
             }
         }
     }
