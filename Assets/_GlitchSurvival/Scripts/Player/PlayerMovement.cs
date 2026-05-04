@@ -22,32 +22,49 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        inputManagement();
+    }
+
+    void inputManagement()
+    {
+        if (GameManager.instance.isGameOver)
+        {
+            return;
+        }
         // Nhận input từ bàn phím (WASD hoặc Arrow)
         movement.x = Input.GetAxisRaw("Horizontal"); // A/D hoặc ← →
         movement.y = Input.GetAxisRaw("Vertical");   // W/S hoặc ↑ ↓
 
         // Chuẩn hóa vector để không bị nhanh hơn khi đi chéo
         movement = movement.normalized;
-        if(movement.x != 0)
+        if (movement.x != 0)
         {
             lastHorizontalVector = movement.x;
             lastMovedVector = new Vector2(lastHorizontalVector, 0f); //lấy hướng chuyển động cuối 
         }
-        if(movement.y != 0)
+        if (movement.y != 0)
         {
             lastVerticalVector = movement.y;
             lastMovedVector = new Vector2(0f, lastVerticalVector);
         }
         if (movement.x != 0 && movement.y != 0)
         {
-            lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector); 
+            lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector);
         }
     }
-
     void FixedUpdate()
     {
+        Move();
+
+    }
+
+    void Move()
+    {
+        if (GameManager.instance.isGameOver)
+        {
+            return;
+        }
         // Di chuyển nhân vật bằng vật lý
         rb.linearVelocity = movement * player.CurrentMoveSpeed;
-
     }
 }
