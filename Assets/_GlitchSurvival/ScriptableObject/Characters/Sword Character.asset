@@ -16,7 +16,7 @@ MonoBehaviour:
   name: Sword Character
   startingWeapon: {fileID: 1169070495262797445, guid: 7aa3226815945c547bb0ec4394c2303a,
     type: 3}
-  maxhealth: 1000
+  maxhealth: 10
   recovery: 1
   moveSpeed: 5
   might: 1

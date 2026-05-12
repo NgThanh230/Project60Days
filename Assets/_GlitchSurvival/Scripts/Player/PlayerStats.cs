@@ -184,6 +184,7 @@ public class PlayerStats : MonoBehaviour
             level++;
             experience -= experienceCap;
             experienceCap += experienceCapIncrease;
+            GameManager.instance.StartLevelUp();
         }
     }
     public void TakeDamage(float damage)
@@ -260,6 +261,8 @@ public class PlayerStats : MonoBehaviour
         inventory.AddPassiveItem(passiveIndex, spawnedPassiveItem.GetComponent<PassiveItem>());// thêm vũ khí vào inventory
         passiveIndex++; 
     }
+
+    //gửi dữ liệu người chơi cho scene 
     public void Kill()
     {
         if (!GameManager.instance.isGameOver)
