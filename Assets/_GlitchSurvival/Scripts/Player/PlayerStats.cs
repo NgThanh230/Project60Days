@@ -164,10 +164,10 @@ public class PlayerStats : MonoBehaviour
         CurrentMight = characterData.Might;
         CurrentProjectileSpeed = characterData.ProjectileSpeed;
         CurrentMagnet = characterData.Magnet;
-
+        //spawn vũ khí khởi đầu
         SpawnWeapon(characterData.StartingWeapon);
-        SpawnWeapon(spawnWeaponCheck);
-        SpawnPassiveItem(passiveItemCheck1);
+        //SpawnWeapon(spawnWeaponCheck);
+        //SpawnPassiveItem(passiveItemCheck1);
         SpawnPassiveItem(passiveItemCheck2);
     }
     

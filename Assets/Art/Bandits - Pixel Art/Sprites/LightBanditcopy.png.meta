@@ -1,0 +1,1068 @@
+fileFormatVersion: 2
+guid: 70d07a62033e1b0499972ab8791dfdba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6030077889088628253
+    second: LightBanditcopy_0
+  - first:
+      213: 3280758666451230510
+    second: LightBanditcopy_1
+  - first:
+      213: -2708765503907387579
+    second: LightBanditcopy_2
+  - first:
+      213: -8216652564528678004
+    second: LightBanditcopy_3
+  - first:
+      213: -3122964001594100419
+    second: LightBanditcopy_4
+  - first:
+      213: -7235875483526903771
+    second: LightBanditcopy_5
+  - first:
+      213: 8757499476961005428
+    second: LightBanditcopy_6
+  - first:
+      213: 4755906014418308642
+    second: LightBanditcopy_7
+  - first:
+      213: 4164782263449971167
+    second: LightBanditcopy_8
+  - first:
+      213: -6841839536100127988
+    second: LightBanditcopy_9
+  - first:
+      213: 8145530489418457731
+    second: LightBanditcopy_10
+  - first:
+      213: 139603055601455648
+    second: LightBanditcopy_11
+  - first:
+      213: 4997920970056117779
+    second: LightBanditcopy_12
+  - first:
+      213: -8652848497768091753
+    second: LightBanditcopy_13
+  - first:
+      213: 2725229175777374821
+    second: LightBanditcopy_14
+  - first:
+      213: 2878166374638638639
+    second: LightBanditcopy_15
+  - first:
+      213: 7027229317752647998
+    second: LightBanditcopy_16
+  - first:
+      213: -5479183022207481458
+    second: LightBanditcopy_17
+  - first:
+      213: 8675599398249971051
+    second: LightBanditcopy_18
+  - first:
+      213: -9017793317792367644
+    second: LightBanditcopy_19
+  - first:
+      213: -8366594577257872818
+    second: LightBanditcopy_20
+  - first:
+      213: -8279818900344068968
+    second: LightBanditcopy_21
+  - first:
+      213: -3030079168884746649
+    second: LightBanditcopy_22
+  - first:
+      213: 6908466675397807912
+    second: LightBanditcopy_23
+  - first:
+      213: -7234495587848833790
+    second: LightBanditcopy_24
+  - first:
+      213: 5121537672095106218
+    second: LightBanditcopy_25
+  - first:
+      213: 9039840335246924250
+    second: LightBanditcopy_26
+  - first:
+      213: -2301451657485608076
+    second: LightBanditcopy_27
+  - first:
+      213: -2085452107126994114
+    second: LightBanditcopy_28
+  - first:
+      213: 7034080477164519828
+    second: LightBanditcopy_29
+  - first:
+      213: 3330699828075792107
+    second: LightBanditcopy_30
+  - first:
+      213: -1727541820223820852
+    second: LightBanditcopy_31
+  - first:
+      213: 5359912888160374822
+    second: LightBanditcopy_32
+  - first:
+      213: -8613644306351587551
+    second: LightBanditcopy_33
+  - first:
+      213: 8059539290503232787
+    second: LightBanditcopy_34
+  - first:
+      213: -534911524733420434
+    second: LightBanditcopy_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LightBanditcopy_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 206
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e95feccb1cd05ca0800000000000000
+      internalID: -6030077889088628253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 206
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f1c9bff98978d20800000000000000
+      internalID: 3280758666451230510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 206
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547a4c73028886ad0800000000000000
+      internalID: -2708765503907387579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 206
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b3778b60698fd80800000000000000
+      internalID: -8216652564528678004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_4
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 206
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35b6a669c009a4d0800000000000000
+      internalID: -3122964001594100419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_5
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 206
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528cb65c591059b90800000000000000
+      internalID: -7235875483526903771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_6
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 206
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f0ee40063e88970800000000000000
+      internalID: 8757499476961005428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_7
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 206
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e0c8e725f500240800000000000000
+      internalID: 4755906014418308642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_8
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 158
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd968c317674cc930800000000000000
+      internalID: 4164782263449971167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_9
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 159
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b47880137ec01a0800000000000000
+      internalID: -6841839536100127988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_10
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 158
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 382a6e0c2dcba0170800000000000000
+      internalID: 8145530489418457731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_11
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 157
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0221faa4d38ffe100800000000000000
+      internalID: 139603055601455648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_12
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 158
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31eaba364ae2c5540800000000000000
+      internalID: 4997920970056117779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_13
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 160
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79fa243d228eae780800000000000000
+      internalID: -8652848497768091753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_14
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 158
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562bdb91f75f1d520800000000000000
+      internalID: 2725229175777374821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_15
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 158
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f265fcc811d41f720800000000000000
+      internalID: 2878166374638638639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_16
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 110
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e317bd725dbb58160800000000000000
+      internalID: 7027229317752647998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 110
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e89c8fd321806f3b0800000000000000
+      internalID: -5479183022207481458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_18
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 110
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d384affabe56870800000000000000
+      internalID: 8675599398249971051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_19
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 110
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb381b71cc5ad280800000000000000
+      internalID: -9017793317792367644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_20
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 126
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e42c5d26f82e3eb80800000000000000
+      internalID: -8366594577257872818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_21
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 110
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8942d68149c281d80800000000000000
+      internalID: -8279818900344068968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_22
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 110
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7665059cc0ff2f5d0800000000000000
+      internalID: -3030079168884746649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_23
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 110
+        width: 24
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82fc5b1b6ddcfdf50800000000000000
+      internalID: 6908466675397807912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_24
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 62
+        width: 39
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205b325c798e99b90800000000000000
+      internalID: -7234495587848833790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_25
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 62
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa48201b06b531740800000000000000
+      internalID: 5121537672095106218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_26
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 62
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad914a8c3e6f37d70800000000000000
+      internalID: 9039840335246924250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_27
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 62
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b16df39e99f00e0800000000000000
+      internalID: -2301451657485608076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_28
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 62
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b0b969b5cfe03e0800000000000000
+      internalID: -2085452107126994114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_29
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 62
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491c6e20de21e9160800000000000000
+      internalID: 7034080477164519828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_30
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 62
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be689e9c8d5093e20800000000000000
+      internalID: 3330699828075792107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_31
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 62
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb6dee0ed98608e0800000000000000
+      internalID: -1727541820223820852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_32
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 14
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62056ddaf5c326a40800000000000000
+      internalID: 5359912888160374822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_33
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 14
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ff852f320367880800000000000000
+      internalID: -8613644306351587551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_34
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 14
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31dbfbf884c39df60800000000000000
+      internalID: 8059539290503232787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightBanditcopy_35
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 14
+        width: 43
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c70066dcc9398f0800000000000000
+      internalID: -534911524733420434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0f10e22b268ffc742812bebf87a27253
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      LightBanditcopy_0: -6030077889088628253
+      LightBanditcopy_1: 3280758666451230510
+      LightBanditcopy_10: 8145530489418457731
+      LightBanditcopy_11: 139603055601455648
+      LightBanditcopy_12: 4997920970056117779
+      LightBanditcopy_13: -8652848497768091753
+      LightBanditcopy_14: 2725229175777374821
+      LightBanditcopy_15: 2878166374638638639
+      LightBanditcopy_16: 7027229317752647998
+      LightBanditcopy_17: -5479183022207481458
+      LightBanditcopy_18: 8675599398249971051
+      LightBanditcopy_19: -9017793317792367644
+      LightBanditcopy_2: -2708765503907387579
+      LightBanditcopy_20: -8366594577257872818
+      LightBanditcopy_21: -8279818900344068968
+      LightBanditcopy_22: -3030079168884746649
+      LightBanditcopy_23: 6908466675397807912
+      LightBanditcopy_24: -7234495587848833790
+      LightBanditcopy_25: 5121537672095106218
+      LightBanditcopy_26: 9039840335246924250
+      LightBanditcopy_27: -2301451657485608076
+      LightBanditcopy_28: -2085452107126994114
+      LightBanditcopy_29: 7034080477164519828
+      LightBanditcopy_3: -8216652564528678004
+      LightBanditcopy_30: 3330699828075792107
+      LightBanditcopy_31: -1727541820223820852
+      LightBanditcopy_32: 5359912888160374822
+      LightBanditcopy_33: -8613644306351587551
+      LightBanditcopy_34: 8059539290503232787
+      LightBanditcopy_35: -534911524733420434
+      LightBanditcopy_4: -3122964001594100419
+      LightBanditcopy_5: -7235875483526903771
+      LightBanditcopy_6: 8757499476961005428
+      LightBanditcopy_7: 4755906014418308642
+      LightBanditcopy_8: 4164782263449971167
+      LightBanditcopy_9: -6841839536100127988
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

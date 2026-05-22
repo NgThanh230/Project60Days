@@ -19,4 +19,6 @@ MonoBehaviour:
   pierce: 0
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Holy Level 2
+  description: Cooldown reduced by 3.
   icon: {fileID: -871904778, guid: f4d2477fd62a199459780452843ca04d, type: 3}

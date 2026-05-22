@@ -1,0 +1,29 @@
+# Unity files
+Library/
+Temp/
+Obj/
+Build/
+Logs/
+UserSettings/
+.idea/
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.sln
+*.csproj
+*.unityproj
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Meta files (nếu bạn không muốn track hết .meta)
+# *.meta   # ← Uncomment nếu muốn ignore hết .meta (thường không khuyến khích)
+!Assets/**/*.meta  # Giữ .meta trong Assets nếu cần
+
+# Other common
+*.DS_Store
+*.swp
+*.swo
+Thumbs.db

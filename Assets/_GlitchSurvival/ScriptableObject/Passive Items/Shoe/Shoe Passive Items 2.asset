@@ -15,4 +15,6 @@ MonoBehaviour:
   multiplier: 70
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Shoe Level 2
+  description: Increases Movement Speed by 70 %
   icon: {fileID: -4902245710394564183, guid: c813380b79c9d4f41a4c99a0a2c426f1, type: 3}
