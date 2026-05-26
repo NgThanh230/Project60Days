@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53920fbe5989db34f849c8b9bc1d03a1, type: 3}
-  m_Name: Holy Weapon 2
+  m_Name: Holy Weapon 3
   m_EditorClassIdentifier: Assembly-CSharp::WeaponScriptableObject
-  prefab: {fileID: 1765375397352784097, guid: aec2d86fb6eb0d641a94ec44e9c301a4, type: 3}
-  damage: 8
+  prefab: {fileID: 1765375397352784097, guid: cb4b577b9d23e2c4bab0021f3f4af502, type: 3}
+  damage: 10
   speed: 0
   cooldownDuration: 3
   pierce: 0
   level: 2
-  nextLevelPrefab: {fileID: 7181664600633072581, guid: 4c528112f8319104aaadf47d943de22b,
-    type: 3}
-  name: Holy Level 2
-  description: Cooldown reduced by 3.
+  nextLevelPrefab: {fileID: 0}
+  name: Holy Level 3
+  description: Damage up by 2
   icon: {fileID: -871904778, guid: f4d2477fd62a199459780452843ca04d, type: 3}
