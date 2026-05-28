@@ -1,7 +1,8 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     CharacterScriptableObject characterData;
@@ -28,6 +29,11 @@ public class PlayerStats : MonoBehaviour
     InventoryManager inventory;
     public int weaponIndex;
     public int passiveIndex;
+
+    [Header("UI")]
+    public Image healthBar;
+    public Image expBar;
+    public TextMeshProUGUI levelText;
 
     public GameObject passiveItemCheck1, passiveItemCheck2;
     public GameObject spawnWeaponCheck;
@@ -138,8 +144,12 @@ public class PlayerStats : MonoBehaviour
         GameManager.instance.MightDisplay.text = "Might: " + currentMight;
         GameManager.instance.ProjectileSpeedDisplay.text = "Projectile Speed: " + currentProjectileSpeed;
         GameManager.instance.MagnetDisplay.text = "Magnet: " + currentMagnet;
-
+        
         GameManager.instance.AssignChosenCharacterUI(characterData);
+
+        UpdateHealthBar();
+        UpdateExpBar();
+        UpdateLevelText();
     }
     private void Update()
     {
@@ -175,6 +185,7 @@ public class PlayerStats : MonoBehaviour
     {
         experience += amount;
         LevelUpChecker();
+        UpdateExpBar();
     }
     void LevelUpChecker()
     {
@@ -184,7 +195,9 @@ public class PlayerStats : MonoBehaviour
             level++;
             experience -= experienceCap;
             experienceCap += experienceCapIncrease;
+            UpdateLevelText();
             GameManager.instance.StartLevelUp();
+            
         }
     }
     public void TakeDamage(float damage)
@@ -200,10 +213,26 @@ public class PlayerStats : MonoBehaviour
             {
                 Kill();
             }
+            UpdateHealthBar();
         }
        
     }
 
+    void UpdateHealthBar()
+    {
+        //cập nhật trạng thái thanh máu
+        healthBar.fillAmount = currentHealth / characterData.Maxhealth;
+    }
+    void UpdateExpBar()
+    {
+        //cập nhật trạng thái thanh kinh nghiệm
+        expBar.fillAmount = (float)experience / experienceCap;
+    }
+    void UpdateLevelText()
+    {
+        //cập nhật Số Level
+        levelText.text = "LV " + level.ToString();
+    }
     public void RestoreHealth(float amount)
     {
         //chỉ heal khi máu của nhân vật dưới chỉ số máu tối đa 
