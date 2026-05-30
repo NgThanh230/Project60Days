@@ -32,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
     public int maxEnemiesAllowed;//tối đa quái có thể spawn
     public bool maxEnemiesReached = false; //boolean dành để báo hiệu khi nào đạt tối đa quái đã spawn
     public float waveInterval; //thời gian giữa các wave
+    bool isWaveActive = false;
 
     [Header("Spawn Positions")]
     public List<Transform> SpawnPoints; //list chứa các điểm spawn quái
@@ -45,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
     }
     void Update()
     {
-        if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
+        if (currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0 && !isWaveActive)
         {
             StartCoroutine(BeginNextWave());
         }
@@ -59,11 +60,13 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
+        isWaveActive = true; 
         //coroutine cho dừng theo waveinterval
         yield return new WaitForSeconds(waveInterval);
         //index đếm số từ 0 nên phải trừ 1
         if (currentWaveCount < waves.Count - 1)
         {
+            isWaveActive = false;
             currentWaveCount++;
             CalculateWaveQuota();
         }
@@ -90,11 +93,7 @@ public class EnemySpawner : MonoBehaviour
                 //giới hạn số lượng quái có thể spawn trong 1 lần
                 if (enemyGroup.spawnCount < enemyGroup.enemyCount)
                 {
-                    if (enemeiesAlive >= maxEnemiesAllowed)
-                    {
-                        maxEnemiesReached = true;
-                        return;
-                    }
+                    
                     //spawn random theo điểm đã có sẵn
                     Instantiate(enemyGroup.enemyPrefabs, player.position + SpawnPoints[Random.Range(0, SpawnPoints.Count)].position, Quaternion.identity);
                     ////tạo điểm spawn cách người chơi ngẫu nhiên cả x và y từ -10 tới 10
@@ -103,18 +102,22 @@ public class EnemySpawner : MonoBehaviour
                     enemyGroup.spawnCount++;
                     waves[currentWaveCount].spawnCount++;
                     enemeiesAlive++;
+                    if (enemeiesAlive >= maxEnemiesAllowed)
+                    {
+                        maxEnemiesReached = true;
+                        return;
+                    }
                 }
             }
-        }
-
-        //reset maxEnemiesReached nếu quái ít hơn số lượng tối đa có thể spawn
-        if (enemeiesAlive < maxEnemiesAllowed)
-        {
-            maxEnemiesReached = false;
         }
     }
     public void OnEnemyKilled()
     {
         enemeiesAlive--;
+        //reset maxEnemiesReached nếu quái ít hơn số lượng tối đa có thể spawn
+        if (enemeiesAlive < maxEnemiesAllowed)
+        {
+            maxEnemiesReached = false;
+        }
     }
 }

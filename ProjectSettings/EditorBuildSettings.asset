@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_GlitchSurvival/Scenes/Game.unity
-    guid: 18cf4b39c2092444c8d20b67fc941ffd
+    path: Assets/_GlitchSurvival/Scenes/Title.unity
+    guid: 7fe55be5116b5c843babc822cbf23d3e
   - enabled: 1
     path: Assets/_GlitchSurvival/Scenes/Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/_GlitchSurvival/Scenes/Game.unity
+    guid: 18cf4b39c2092444c8d20b67fc941ffd
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
