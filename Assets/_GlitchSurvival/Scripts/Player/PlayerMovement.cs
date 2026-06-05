@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using Terresquall;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -32,8 +32,25 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         // Nhận input từ bàn phím (WASD hoặc Arrow)
-        movement.x = Input.GetAxisRaw("Horizontal"); // A/D hoặc ← →
-        movement.y = Input.GetAxisRaw("Vertical");   // W/S hoặc ↑ ↓
+        float moveX = Input.GetAxisRaw("Horizontal"); // A/D hoặc ← →
+        float moveY = Input.GetAxisRaw("Vertical");   // W/S hoặc ↑ ↓
+
+        if (VirtualJoystick.CountActiveInstances() > 0)
+        {
+            float joyX = VirtualJoystick.GetAxisRaw("Horizontal");
+            float joyY = VirtualJoystick.GetAxisRaw("Vertical");
+
+            // Chỉ ghi đè nếu Joystick đang được kéo (giá trị khác 0)
+            if (Mathf.Abs(joyX) > 0.01f || Mathf.Abs(joyY) > 0.01f)
+            {
+                moveX = joyX;
+                moveY = joyY;
+            }
+        }
+
+        movement.x = moveX;
+        movement.y = moveY;
+
 
         // Chuẩn hóa vector để không bị nhanh hơn khi đi chéo
         movement = movement.normalized;

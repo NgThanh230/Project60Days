@@ -4,13 +4,14 @@ public class EnemyMovement : MonoBehaviour
 {
     EnemyStats enemy;
     Transform player;
-
+    SpriteRenderer spriteRenderer;
     Vector2 knockbackVelocity;
     float knockbackDuration;
     void Start()
     {
         enemy = GetComponent<EnemyStats>();
         player = FindAnyObjectByType<PlayerMovement>().transform;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,19 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMoveSpeed * Time.deltaTime); //enemy chạy từ điểm spawn tới người chơi, *time để đồng bộ thời gian
+            
+            Vector2 targetPos = player.transform.position;
+            //enemy chạy từ điểm spawn tới người chơi, *time để đồng bộ thời gian
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, enemy.currentMoveSpeed * Time.deltaTime); 
+            // Nếu người chơi ở bên trái (targetPos.x < transform.position.x), lật sprite
+            if (targetPos.x < transform.position.x)
+            {
+                spriteRenderer.flipX = true; // Lật sang trái
+            }
+            else if (targetPos.x > transform.position.x)
+            {
+                spriteRenderer.flipX = false; // Trở lại bên phải
+            }
         }
        
     }

@@ -113,13 +113,14 @@ public class GameManager : MonoBehaviour
         WaitForEndOfFrame w = new WaitForEndOfFrame();
         float t = 0f;
         float yOffset = 0f;
+        
         while (t < duration)
         {
+           
             yield return w;
             t += Time.deltaTime;
 
             tmPro.color = new Color(tmPro.color.r, tmPro.color.g, tmPro.color.b, 1 - t / duration);
-
             yOffset += speed * Time.deltaTime;
             rect.position = referenceCamera.WorldToScreenPoint(target.position + new Vector3(0, yOffset));
         }
