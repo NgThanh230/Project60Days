@@ -6529,6 +6529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31aa98fba17c1e04a81b655cc9fed17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  damageEffect: {fileID: 7582204913690549364, guid: 56454586a2718e143ac7ee8b8026ab56,
+    type: 3}
   experience: 0
   level: 1
   experienceCap: 100
@@ -6539,12 +6541,6 @@ MonoBehaviour:
   healthBar: {fileID: 133617397}
   expBar: {fileID: 525125786}
   levelText: {fileID: 1426422475}
-  passiveItemCheck1: {fileID: 799980649935856848, guid: 6d9d9965ce57cc04d887ea48bc609d2a,
-    type: 3}
-  passiveItemCheck2: {fileID: 3159441912221841527, guid: 2555546b362a1824aafdfa007f5b4910,
-    type: 3}
-  spawnWeaponCheck: {fileID: 7181664600633072581, guid: c25d2cb308538854bb75e773ab465b6a,
-    type: 3}
 --- !u!114 &1408409563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6622,6 +6618,8 @@ MonoBehaviour:
     upgradeDescriptionDisplay: {fileID: 1048202041}
     upgradeIcon: {fileID: 2065989504}
     upgradeButton: {fileID: 1576463050}
+  weaponEvolutions:
+  - {fileID: 11400000, guid: b018f5c3965a2be4d9405a6d73bb5746, type: 2}
 --- !u!1 &1409261624
 GameObject:
   m_ObjectHideFlags: 0
@@ -7296,6 +7294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   state: 0
   preState: 0
+  damageTextCanvas: {fileID: 1825810327}
+  textFontSize: 20
+  textFont: {fileID: 11400000, guid: b4ab532c13a20a94aaef1c91f51ad0a5, type: 2}
+  referenceCamera: {fileID: 0}
   pauseScreen: {fileID: 1204258509}
   resultsScreen: {fileID: 429122589}
   LevelupScreen: {fileID: 204755396}
@@ -10332,6 +10334,74 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1309057746500739745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177014062070543340, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325031417873038807, guid: 9eb8b8acfd9fcca47bc06d51e8630c78,
+        type: 3}
+      propertyPath: m_Name
+      value: Treasure Chest
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9eb8b8acfd9fcca47bc06d51e8630c78, type: 3}
 --- !u!1001 &3094165162956425225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10626,3 +10696,4 @@ SceneRoots:
   - {fileID: 172993793}
   - {fileID: 1825810328}
   - {fileID: 1560585631}
+  - {fileID: 1309057746500739745}

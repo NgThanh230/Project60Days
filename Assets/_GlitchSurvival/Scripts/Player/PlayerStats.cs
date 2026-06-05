@@ -13,6 +13,9 @@ public class PlayerStats : MonoBehaviour
     float currentMight;
     float currentProjectileSpeed;
     float currentMagnet;
+
+    public ParticleSystem damageEffect;
+
     //kinh nghiệm và level cho nhân vật
     [Header("Experience/Level")]
     public int experience = 0;
@@ -34,9 +37,6 @@ public class PlayerStats : MonoBehaviour
     public Image healthBar;
     public Image expBar;
     public TextMeshProUGUI levelText;
-
-    public GameObject passiveItemCheck1, passiveItemCheck2;
-    public GameObject spawnWeaponCheck;
 
     #region Stats Properties
     public float CurrentHealth
@@ -176,9 +176,7 @@ public class PlayerStats : MonoBehaviour
         CurrentMagnet = characterData.Magnet;
         //spawn vũ khí khởi đầu
         SpawnWeapon(characterData.StartingWeapon);
-        //SpawnWeapon(spawnWeaponCheck);
-        //SpawnPassiveItem(passiveItemCheck1);
-        SpawnPassiveItem(passiveItemCheck2);
+        
     }
     
     public void IncreaseExperience(int amount)
@@ -206,6 +204,10 @@ public class PlayerStats : MonoBehaviour
         if (!isInvincible)
         {
             CurrentHealth -= damage;
+            if (damageEffect)
+            {
+                Instantiate(damageEffect, transform.position, Quaternion.identity);
+            }
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;
             //khi máu < 0 nv sẽ chết

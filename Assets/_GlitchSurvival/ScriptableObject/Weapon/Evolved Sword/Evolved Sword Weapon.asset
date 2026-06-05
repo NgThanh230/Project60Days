@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53920fbe5989db34f849c8b9bc1d03a1, type: 3}
-  m_Name: Sword Weapon 2
+  m_Name: Evolved Sword Weapon
   m_EditorClassIdentifier: Assembly-CSharp::WeaponScriptableObject
-  prefab: {fileID: 8678576736677451231, guid: d1e5ea79d59f93c40a28f964453e2966, type: 3}
-  damage: 5
+  prefab: {fileID: 8678576736677451231, guid: 59e3243522df67a4d975ce18cd497da0, type: 3}
+  damage: 10
   speed: 15
-  cooldownDuration: 2
-  pierce: 1
-  level: 2
+  cooldownDuration: 3
+  pierce: 2
+  level: 0
   nextLevelPrefab: {fileID: 0}
-  name: Sword Qi Level 2
-  description: Qi speed up by 5.
-  icon: {fileID: 6679520303965880881, guid: f1675046f82e277428585ed10b84c7f5, type: 3}
+  name: 
+  description: 
+  icon: {fileID: 429538527, guid: f1675046f82e277428585ed10b84c7f5, type: 3}

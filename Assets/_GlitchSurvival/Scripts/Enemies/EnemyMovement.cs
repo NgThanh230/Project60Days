@@ -4,7 +4,9 @@ public class EnemyMovement : MonoBehaviour
 {
     EnemyStats enemy;
     Transform player;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    Vector2 knockbackVelocity;
+    float knockbackDuration;
     void Start()
     {
         enemy = GetComponent<EnemyStats>();
@@ -14,6 +16,25 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMoveSpeed * Time.deltaTime); //enemy chạy từ điểm spawn tới người chơi, *time để đồng bộ thời gian
+        if (knockbackDuration > 0)
+        {
+            transform.position += (Vector3)knockbackVelocity * Time.deltaTime;
+            knockbackDuration -= Time.deltaTime;
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemy.currentMoveSpeed * Time.deltaTime); //enemy chạy từ điểm spawn tới người chơi, *time để đồng bộ thời gian
+        }
+       
+    }
+    public void Knockback(Vector2 velocity, float duration)
+    {
+        //hủy knockback nếu thời gian knockback lớn hơn 0
+        if (knockbackDuration > 0)
+        {
+            return;
+        }
+        knockbackVelocity = velocity;
+        knockbackDuration = duration;
     }
 }

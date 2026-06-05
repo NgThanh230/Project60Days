@@ -1,5 +1,6 @@
+using System.Collections;
 using UnityEngine;
-
+[RequireComponent(typeof(SpriteRenderer))]
 public class EnemyStats : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
@@ -13,6 +14,13 @@ public class EnemyStats : MonoBehaviour
     public float deSpawnDistance = 20f;
     Transform player;
 
+    [Header("Damage FeedBack")]
+    public Color damageColor = new Color(1, 0, 0, 1);
+    public float damageFlashDuration = 0.2f;
+    public float deathFadeTime = 0.6f;
+    Color originalColor;
+    SpriteRenderer sr;
+    EnemyMovement movement;
     void Awake()
     {
         currentDamage = enemyData.Damage;
@@ -22,6 +30,10 @@ public class EnemyStats : MonoBehaviour
     private void Start()
     {
         player = FindAnyObjectByType<PlayerStats>().transform;
+        sr = GetComponent<SpriteRenderer>();
+        originalColor = sr.color;
+
+        movement = GetComponent<EnemyMovement>();
     }
     private void Update()
     {
@@ -31,20 +43,53 @@ public class EnemyStats : MonoBehaviour
         }
        
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector2 sourcePosition, float knockbackForce = 5f, float knockbackDuration = 0.2f)
     {
         currentHealth -= damage;
+        StartCoroutine(DamageFlash());
+        
+        //tạo popup khi enemy dính dame
+        if (damage > 0)
+        {
+            GameManager.GenerateFloatingText(Mathf.FloorToInt(damage).ToString(), transform);
+        }
+        //thêm knockback nếu knockbackForce không phải là 0
+        if (knockbackForce > 0)
+        {
+            //lấy hướng knockback
+            Vector2 dir = (Vector2)transform.position - sourcePosition;
+            movement.Knockback(dir.normalized * knockbackForce, knockbackDuration);
+        }
         if (currentHealth <= 0)
         {
             Kill();
         }
     }
+    IEnumerator DamageFlash()
+    {
+        sr.color = damageColor;
+        yield return new WaitForSeconds(damageFlashDuration);
+        sr.color = originalColor;
+    }
 
     public void Kill()
     {
+        StartCoroutine(KillFade());
+    }
+    IEnumerator KillFade()
+    {
+        WaitForEndOfFrame w = new WaitForEndOfFrame();
+        float t = 0, origAlpha = sr.color.a;
+
+        while (t < deathFadeTime)
+        {
+            yield return w;
+            t += Time.deltaTime;
+
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, (1 - t / deathFadeTime) * origAlpha);
+        }
         Destroy(gameObject);
     }
-
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -65,4 +110,8 @@ public class EnemyStats : MonoBehaviour
         // lấy vị trí của player + với vị trí ngẫu nhiên trong list spawnpoint = vị trí spawn quái mới
         transform.position = player.position + enemySpawner.SpawnPoints[Random.Range(0, enemySpawner.SpawnPoints.Count)].position;
     }
+    //Coroutine cho phần hiệu ứng quái dính dame 
+    
+   
+    
 }
