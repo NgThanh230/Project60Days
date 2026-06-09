@@ -41,4 +41,4 @@ Assets/_GlitchSurvival/
 ## Contact
 
 - **LinkedIn:** [thanh-nguyen-ba](https://www.linkedin.com/in/thanh-nguyen-ba-17139325a)
-- **LinkedIn:** [GlitchSurvival GamePlay](https://youtu.be/hPd1-7PQ7vI)
+- **Video Demo:** [GlitchSurvival GamePlay](https://youtu.be/hPd1-7PQ7vI)
