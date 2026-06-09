@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa075aafbb850ba4baf912e2b962d7cd, type: 3}
   m_Name: Bat Enemy
   m_EditorClassIdentifier: Assembly-CSharp::EnemieScriptableObject
-  moveSpeed: 2
-  maxHealth: 10
+  moveSpeed: 1
+  maxHealth: 15
   damage: 30

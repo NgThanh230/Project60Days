@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerAnimator : MonoBehaviour
 {
     //references
     public Animator animator;
@@ -39,4 +39,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
     }
     
+    public void SetAnimatorController(RuntimeAnimatorController ac)
+    {
+        if (!animator)
+        {
+            animator = GetComponent<Animator>();
+            animator.runtimeAnimatorController = ac;
+        }
+    }
 }

@@ -194,6 +194,9 @@ MonoBehaviour:
   currentHealth: 0
   currentDamage: 0
   deSpawnDistance: 20
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.2
+  deathFadeTime: 0.6
 --- !u!114 &-1514643664439328290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,4 +213,4 @@ MonoBehaviour:
   - name: Blue Gem
     itemPrefab: {fileID: 1507197957410042359, guid: 4c863e692b1380842a6d1873a4a5cf36,
       type: 3}
-    dropRate: 50
+    dropRate: 100

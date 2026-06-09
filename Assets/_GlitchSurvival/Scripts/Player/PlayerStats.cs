@@ -38,6 +38,7 @@ public class PlayerStats : MonoBehaviour
     public Image expBar;
     public TextMeshProUGUI levelText;
 
+    PlayerAnimator playerAnimator;
     #region Stats Properties
     public float CurrentHealth
     {
@@ -176,7 +177,9 @@ public class PlayerStats : MonoBehaviour
         CurrentMagnet = characterData.Magnet;
         //spawn vũ khí khởi đầu
         SpawnWeapon(characterData.StartingWeapon);
-        
+
+        playerAnimator = GetComponent<PlayerAnimator>();
+        playerAnimator.SetAnimatorController(characterData.controller);
     }
     
     public void IncreaseExperience(int amount)
